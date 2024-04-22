@@ -47,12 +47,17 @@
     margin-top: 40px;
   }
   .question-form input[type="text"],
+  .question-form input[type="email"],
   .question-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+  }
+  .question-form label {
+    display: block;
+    margin-bottom: 5px;
   }
   .question-form button {
     padding: 10px 20px;
@@ -99,9 +104,12 @@
     <section id="questions" class="questions">
       <h2>Have Questions?</h2>
       <form class="question-form">
-        <input type="text" placeholder="Your Name">
-        <input type="text" placeholder="Your Email">
-        <textarea placeholder="Your Question"></textarea>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email">
+        <label for="question">Your Question:</label>
+        <textarea id="question" name="question" placeholder="Your Question"></textarea>
         <button type="submit">Submit</button>
       </form>
     </section>
